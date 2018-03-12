@@ -52,5 +52,7 @@
       "js"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "travis": "^0.1.1"
+  }
 }
