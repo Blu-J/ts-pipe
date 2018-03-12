@@ -1,5 +1,6 @@
 # ts-pipe
 
+[![Build Status](https://travis-ci.org/Blu-J/ts-pipe.svg?branch=master)](https://travis-ci.org/Blu-J/ts-pipe)
 Being able to pipe data through functions or compose a piped function.
 
 ## Examples
