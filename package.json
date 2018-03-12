@@ -1,6 +1,6 @@
 {
   "name": "ts-pipe",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "Simple typescript pipe syntax",
   "main": "./index.js",
   "typings": "./index.d.ts",
