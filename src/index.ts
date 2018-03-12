@@ -16,9 +16,9 @@ export type LazyPipeable<A, B> = {
 export const lazyPipeable = <A extends any, B extends any>(
   fn: (a: A) => B
 ): LazyPipeable<A, B> => ({
-  pipe: <C extends any>(composedWith: (b: B) => C) =>
+  pipe: <C extends any>(pipeInto: (b: B) => C) =>
     lazyPipeable(function composed(a: A) {
-      return composedWith(fn(a));
+      return pipeInto(fn(a));
     }),
   call: (a: A) => fn(a)
 });
