@@ -1,4 +1,4 @@
-import { pipeable, lazyPipeable } from "./index";
+import { lazyPipeable, pipeable } from "./index";
 
 describe("With pipeable", () => {
   it("should be able to pipe a value through", () => {
