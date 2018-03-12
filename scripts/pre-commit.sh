@@ -5,17 +5,6 @@ set -o errexit #abort if any command fails
 changedFiles=$(git diff --cached --name-only --diff-filter=ACM | grep '.\([tj]sx\?\|css\|graphql\)$' | tr '\n' ' ')
 [ -z "$changedFiles" ] && exit 0
 
-echo "Running lint"
-echo "$changedFiles" | xargs ./node_modules/.bin/tslint -c tslint.json --exclude --format stylish 'src/**/*.d.ts'
-tslintExitCode=$?
-
-# Exit with bad code for the tslint
-if [ $tslintExitCode -ne 0 ]
-then
-  exit $tslintExitCode
-fi
-
-
 echo "Running prettier"
 echo "$changedFiles" | xargs ./node_modules/.bin/prettier --write
 prettierExitCode=$?
