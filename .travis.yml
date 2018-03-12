@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - "node"
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+  
+cache: 
+  yarn: true
+  directories:
+    - typings
+
+before_deploy:
+  - cd dist
+
+
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: dragondef@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
+    tags: true
+    
+script:
+  - npm run run-script
+after_success:
+  - npm run build

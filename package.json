@@ -1,0 +1,56 @@
+{
+  "name": "ts-pipe",
+  "version": "0.0.0",
+  "description": "Simple typescript pipe syntax",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blu-j/ts-pipe"
+  },
+  "author": "Justin Miller<mogulslayer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --outDir dist/ && cp ./package.json ./dist/",
+    "test": "jest",
+    "semantic-release": "semantic-release pre && semantic-release post",
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "run-script": "npm run lint && npm run build && npm run test",
+    "precommit": "./scripts/pre-commit.sh",
+    "prepush": "npm run test",
+    "commitmsg": "validate-commit-msg",
+    "release": "standard-version && git push --follow-tags origin master"
+  },
+  "devDependencies": {
+    "@types/jest": "^19.2.2",
+    "@types/node": "^7.0.12",
+    "child_process": "^1.0.2",
+    "colors": "^1.1.2",
+    "commitizen": "^2.9.6",
+    "fs": "^0.0.1-security",
+    "husky": "^0.14.3",
+    "jest": "^19.0.2",
+    "path": "^0.12.7",
+    "prettier": "^1.7.4",
+    "standard-version": "^4.2.0",
+    "ts-jest": "^19.0.9",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.7.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "prettier": {},
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(dist|src)/.*\\.spec\\.(js|ts)x?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "dependencies": {}
+}

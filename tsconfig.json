@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+	  "sourceMap": true,
+	  "target": "es5",
+	  "noUnusedLocals": true,
+	  "noUnusedParameters": true,
+	  "strictNullChecks": true,
+	  "noFallthroughCasesInSwitch": true,
+	  "strict": true,
+	  "jsx": "react",
+	  "declaration": true,
+	  "lib": [
+		"dom",
+		"es2015"
+	  ],
+	  "baseUrl": "."
+	},
+	"include": [
+	  "src/**/*",
+	  "typings/**/*",
+	  "node_modules/es6-promise/es6-promise"
+	]
+  }
