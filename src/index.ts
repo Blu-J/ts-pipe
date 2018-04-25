@@ -18,6 +18,32 @@ export const pipeable = <A>(value: A): Pipeable<A> => ({
   value
 });
 
+export type PipeableFunction<A, B> = {
+  /**
+   * We would like to compose on another function
+   */
+  pipe<C>(pipeInto: (b: B) => C): PipeableFunction<A, C>;
+  /** we are done composing our functions together and would like to call them */
+  (a: A): B;
+};
+
+/**
+ * We want to combine several functions together with a simpler
+ * type signature than a compose for n functions while being succinct.
+ * @param fn The first function in which our composition/ flow will start
+ */
+export const pipeFunction = <A extends any, B extends any>(
+  fn: (a: A) => B
+): PipeableFunction<A, B> =>
+  Object.assign((a: A) => fn(a), {
+    pipe: <C extends any>(pipeInto: (b: B) => C) =>
+      pipeFunction(function composed(a: A) {
+        return pipeInto(fn(a));
+      })
+  });
+
+export const pipeFn = pipeFunction;
+
 export type LazyPipeable<A, B> = {
   /**
    * We would like to compose on another function
@@ -29,7 +55,7 @@ export type LazyPipeable<A, B> = {
 
 /**
  * We want to combine several functions together with a simpler
- * type signature than a compose for n functions while being succient.
+ * type signature than a compose for n functions while being succinct.
  * @param fn The first function in which our composition/ flow will start
  */
 export const lazyPipeable = <A extends any, B extends any>(
