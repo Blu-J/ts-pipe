@@ -28,7 +28,7 @@
     "colors": "^1.1.2",
     "commitizen": "^3.0.1",
     "fs": "^0.0.1-security",
-    "husky": "^1.0.1",
+    "husky": "^2.1.0",
     "jest": "^24.1.0",
     "path": "^0.12.7",
     "prettier": "^1.7.4",
