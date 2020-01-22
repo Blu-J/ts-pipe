@@ -35,7 +35,7 @@
     "standard-version": "^7.0.0",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.1",
-    "tslint": "^5.7.0",
+    "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.6.0",
     "typescript": "^3.1.1",
     "validate-commit-msg": "^2.14.0"
