@@ -1,6 +1,6 @@
 # ts-pipe
 
-[![Build Status](https://travis-ci.org/Blu-J/ts-pipe.svg?branch=master)](https://travis-ci.org/Blu-J/ts-pipe)
+![Node.js CI](https://github.com/Blu-J/ts-pipe/workflows/Node.js%20CI/badge.svg)
 ![Bundle Phobia](https://badgen.net/bundlephobia/min/ts-pipe)
 ![Bundle Phobia](https://badgen.net/bundlephobia/minzip/ts-pipe)
 Being able to pipe data through functions or compose a piped function.
