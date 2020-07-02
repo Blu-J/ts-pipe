@@ -16,9 +16,6 @@
     "semantic-release": "semantic-release pre && semantic-release post",
     "lint": "tslint --project tsconfig.json --format stylish",
     "run-script": "npm run lint && npm run build && npm run test",
-    "precommit": "./scripts/pre-commit.sh",
-    "prepush": "npm run test",
-    "commitmsg": "validate-commit-msg",
     "release": "standard-version && git push --follow-tags origin master"
   },
   "devDependencies": {
@@ -52,7 +49,11 @@
       "js"
     ]
   },
-  "dependencies": {
-    "travis": "^0.1.1"
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "./scripts/pre-commit.sh",
+      "pre-push": "npm run test"
+    }
   }
 }
