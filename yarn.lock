@@ -2,13 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/code-frame@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
-  dependencies:
-    "@babel/highlight" "^7.0.0"
-
-"@babel/code-frame@^7.8.3":
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
   dependencies:
@@ -135,14 +129,6 @@
     "@babel/template" "^7.8.3"
     "@babel/traverse" "^7.8.3"
     "@babel/types" "^7.8.3"
-
-"@babel/highlight@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.0.0.tgz#f710c38c8d458e6dd9a201afb637fcb781ce99e4"
-  dependencies:
-    chalk "^2.0.0"
-    esutils "^2.0.2"
-    js-tokens "^4.0.0"
 
 "@babel/highlight@^7.8.3":
   version "7.8.3"
@@ -1873,7 +1859,7 @@ gitconfiglocal@^1.0.0:
   dependencies:
     ini "^1.3.2"
 
-glob@7.1.4, glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
+glob@7.1.4:
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
   dependencies:
@@ -1884,7 +1870,7 @@ glob@7.1.4, glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.1.4:
+glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
   dependencies:
@@ -3097,10 +3083,6 @@ minimist-options@^3.0.1:
     arrify "^1.0.1"
     is-plain-obj "^1.1.0"
 
-minimist@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
-
 minimist@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
@@ -3116,11 +3098,11 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@0.x, mkdirp@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
+mkdirp@0.x, mkdirp@^0.5.1, mkdirp@^0.5.3:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
   dependencies:
-    minimist "0.0.8"
+    minimist "^1.2.5"
 
 modify-values@^1.0.0:
   version "1.0.0"
@@ -4376,8 +4358,8 @@ tslint-config-prettier@^1.6.0:
   resolved "https://registry.yarnpkg.com/tslint-config-prettier/-/tslint-config-prettier-1.18.0.tgz#75f140bde947d35d8f0d238e0ebf809d64592c37"
 
 tslint@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/tslint/-/tslint-6.0.0.tgz#1c0148beac4779924216302f192cdaa153618310"
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/tslint/-/tslint-6.1.2.tgz#2433c248512cc5a7b2ab88ad44a6b1b34c6911cf"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     builtin-modules "^1.1.1"
@@ -4387,7 +4369,7 @@ tslint@^6.0.0:
     glob "^7.1.1"
     js-yaml "^3.13.1"
     minimatch "^3.0.4"
-    mkdirp "^0.5.1"
+    mkdirp "^0.5.3"
     resolve "^1.3.2"
     semver "^5.3.0"
     tslib "^1.10.0"
