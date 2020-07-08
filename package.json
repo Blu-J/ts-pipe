@@ -11,25 +11,23 @@
   "author": "Justin Miller<mogulslayer@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "ci": "npm run build && npm test && npm run lint && npm run pretty-check",
     "build": "tsc --outDir dist/ && cp ./package.json ./dist/",
     "test": "jest",
-    "semantic-release": "semantic-release pre && semantic-release post",
     "lint": "tslint --project tsconfig.json --format stylish",
-    "run-script": "npm run lint && npm run build && npm run test",
-    "release": "standard-version && git push --follow-tags origin master"
+    "pretty-check": "prettier --check src",
+    "fmt": "prettier --write ."
   },
   "devDependencies": {
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
-    "husky": "^4.0.0",
     "jest": "^25.1.0",
     "prettier": "^2.0.5",
     "ts-jest": "^25.0.0",
     "ts-node": "^8.0.1",
     "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.6.0",
-    "typescript": "^3.1.1",
-    "validate-commit-msg": "^2.14.0"
+    "typescript": "^3.1.1"
   },
   "prettier": {},
   "jest": {
@@ -42,12 +40,5 @@
       "tsx",
       "js"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "validate-commit-msg",
-      "pre-commit": "./scripts/pre-commit.sh",
-      "pre-push": "npm run test"
-    }
   }
 }
