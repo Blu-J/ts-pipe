@@ -15,7 +15,7 @@ export const pipeable = <A>(value: A): Pipeable<A> => ({
   /** We are done piping the value through functions and need to get the
    * piped value out.
    */
-  value
+  value,
 });
 
 export type PipeableFunction<A, B> = {
@@ -39,7 +39,7 @@ export const pipeFunction = <A extends any, B extends any>(
     pipe: <C extends any>(pipeInto: (b: B) => C) =>
       pipeFunction(function composed(a: A) {
         return pipeInto(fn(a));
-      })
+      }),
   });
 
 export const pipeFn = pipeFunction;
@@ -65,5 +65,5 @@ export const lazyPipeable = <A extends any, B extends any>(
     lazyPipeable(function composed(a: A) {
       return pipeInto(fn(a));
     }),
-  call: (a: A) => fn(a)
+  call: (a: A) => fn(a),
 });
