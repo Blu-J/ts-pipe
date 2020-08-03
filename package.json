@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "ci": "npm run build && npm test && npm run lint && npm run pretty-check",
-    "build": "tsc --outDir dist/ && cp ./package.json ./dist/",
+    "build": "tsc --outDir dist/ && cp ./package.json ./dist/ && cp ./README.md ./dist",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --format stylish",
     "pretty-check": "prettier --check src",
